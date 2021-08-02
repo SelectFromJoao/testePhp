@@ -50,7 +50,6 @@ class TransactionHandler
         $this->fraudChecker = $fraudChecker;
         $this->notifier = $notifier;
         $this->TransactionData = $TransactionData;
-        $this->TransactionData = $TransactionData;
     }
 
     /**
@@ -58,8 +57,6 @@ class TransactionHandler
      */
     public function create(Transaction $transaction, notification $notifyBuyer, notification $notifySeller  ): Transaction
     {
-         $message = 'successful operation';
-
         if (!$this->fraudChecker->check($transaction)) {
             throw new FraudCheckerException;
         }
