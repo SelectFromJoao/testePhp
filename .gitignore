@@ -1,0 +1,5 @@
+.git/
+vendor/
+.phpunit*
+.idea*
+./tests/reports/*
